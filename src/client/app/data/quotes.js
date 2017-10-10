@@ -40,4 +40,4 @@ export const quotes = [
   'This very heart which is mine will forever remain indefinable to me. Between the certainty I have of my existence and the content I try to give to that assurance, the gap will never be filled. Forever I shall be a stranger to myself.@Albert Camus'
 ];
 
-export const colors = ["#EC8DA6", "#D18DEC", "gray", "#A28DEC", "#8DAEEC", "#8DECAD", "#CEEC8D", "#ECD18D", "#ECA28D"];
+export const colors = ['#EC8DA6', '#D18DEC', 'gray', '#A28DEC', '#8DAEEC', '#8DECAD', '#CEEC8D', '#ECD18D', '#ECA28D'];

@@ -1,17 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import Container from './containers'
-import store from './store'
+import AppContainer from './containers/AppContainer';
+import store from './store';
 
 const AppWrapper = () => (
-	<Provider store={store}>
-		<Container/>
-	</Provider>
+  <Provider store={store}>
+    <AppContainer />
+  </Provider>
 );
 
-ReactDOM.render(<AppWrapper />, document.getElementById('app'));
-
-
-
-
+render(<AppWrapper />, document.getElementById('app'));

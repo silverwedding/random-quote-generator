@@ -1,15 +1,10 @@
 import { connect } from 'react-redux';
 import App from '../components/App';
-import { newQuote } from '../actions/';
+import { newQuote } from '../actions';
 import { makeQuote, setBackground } from '../functions';
 import { quotes, colors } from '../data/quotes';
 
-const mapStateToProps = (state) => {
-  return {
-    quote: state.quote,
-    backgroundColor: state.backgroundColor
-  };
-};
+const mapStateToProps = ({ quote, backgroundColor }) => ({ quote, backgroundColor });
 
 const mapDispatchToProps = (dispatch) => {
   return {

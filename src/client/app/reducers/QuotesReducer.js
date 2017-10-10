@@ -5,19 +5,17 @@ import { colors, quotes } from '../data/quotes';
 // create an object for the default data
 export const defaultState = {
   quote: makeQuote(quotes),
-  backgroundColor: {backgroundColor: setBackground(colors)}
+  backgroundColor: setBackground(colors)
 };
 
-const quotesReducer = (state = defaultState, action) => {
+export const quotesReducer = (state = defaultState, action) => {
   switch (action.type) {
   case actions.NEW_QUOTE:
     return {
-      quote: action.quote,
-      backgroundColor: {backgroundColor: action.backgroundColor}
+      backgroundColor: action.payload.backgroundColor,
+      quote: action.payload.quote
     };
   default:
     return state;
   }
 };
-
-export default quotesReducer;

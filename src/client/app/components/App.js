@@ -1,7 +1,8 @@
 import React from 'react';
 
-const App = (props) => (
-  <div style={props.backgroundColor}>
+const App = (props) => {
+  return (
+  <div style={{backgroundColor: props.backgroundColor}}>
     <div className="container">
       <div className="row">
         <div className="col-xs-12">
@@ -39,7 +40,7 @@ const App = (props) => (
         </div>
       </div>
     </div>
-  </div>
-);
+  </div>);
+};
 
 export default App;

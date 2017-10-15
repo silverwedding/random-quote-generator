@@ -1,18 +1,43 @@
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import App from '../components/App';
 import { newQuote } from '../actions';
 import { makeQuote, setBackground } from '../functions';
 import { quotes, colors } from '../data/quotes';
 
-const mapStateToProps = ({ quote, backgroundColor }) => ({ quote, backgroundColor });
+export class AppContainer extends Component {
+  constructor (props) {
+    super(props);
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    submitNewQuote: () => {
-      dispatch(newQuote(makeQuote(quotes), setBackground(colors)));
-    }
-  };
-};
+    this.getNewQuote = this.getNewQuote.bind(this);
+  }
 
-const Container = connect(mapStateToProps, mapDispatchToProps)(App);
+  componentWillMount () {
+    this.getNewQuote();
+  }
+
+  getNewQuote () {
+    const { newQuote } = this.props;
+    newQuote(makeQuote(quotes), setBackground(colors));
+  }
+
+  render () {
+    const { quote, backgroundColor } = this.props;
+
+    return (
+      <App
+        quote={quote}
+        backgroundColor={backgroundColor}
+        getNewQuote={this.getNewQuote}
+      />
+    );
+  }
+}
+
+const mapStateToProps = (
+  { quote, backgroundColor }
+) => (
+  { quote, backgroundColor }
+);
+const Container = connect(mapStateToProps, { newQuote })(AppContainer);
 export default Container;

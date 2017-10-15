@@ -49,7 +49,7 @@ ShallowWrapper {
         </div>
         <hr />
         <div
-          className="row"
+          className="row quote-container"
         >
           <div
             className="col-xs-12"
@@ -139,7 +139,7 @@ ShallowWrapper {
           </div>,
           <hr />,
           <div
-            className="row"
+            className="row quote-container"
           >
             <div
               className="col-xs-12"
@@ -343,7 +343,7 @@ ShallowWrapper {
                  Tweet
               </a>
             </div>,
-            "className": "row",
+            "className": "row quote-container",
           },
           "ref": null,
           "rendered": Object {
@@ -650,7 +650,7 @@ ShallowWrapper {
           </div>
           <hr />
           <div
-            className="row"
+            className="row quote-container"
           >
             <div
               className="col-xs-12"
@@ -740,7 +740,7 @@ ShallowWrapper {
             </div>,
             <hr />,
             <div
-              className="row"
+              className="row quote-container"
             >
               <div
                 className="col-xs-12"
@@ -944,7 +944,7 @@ ShallowWrapper {
                    Tweet
                 </a>
               </div>,
-              "className": "row",
+              "className": "row quote-container",
             },
             "ref": null,
             "rendered": Object {

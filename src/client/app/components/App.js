@@ -1,7 +1,8 @@
 import React from 'react';
+require('../sass/style.scss');
 
 const App = ({ quote, backgroundColor, getNewQuote }) => (
-  <div style={{backgroundColor: backgroundColor}}>
+  <div style={{ backgroundColor: backgroundColor }} >
     <div className="container">
       <div className="row">
         <div className="col-xs-12">
@@ -10,7 +11,7 @@ const App = ({ quote, backgroundColor, getNewQuote }) => (
         </div>
       </div>
       <hr />
-      <div className="row">
+      <div className="row quote-container">
         <div className="col-xs-12">
           <div className="text-center quote-box" >
             <div className="quote">

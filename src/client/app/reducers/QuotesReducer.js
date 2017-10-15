@@ -1,11 +1,9 @@
 import * as actions from '../actions/types';
-import { makeQuote, setBackground } from '../functions/index';
-import { colors, quotes } from '../data/quotes';
 
 // create an object for the default data
 export const defaultState = {
-  quote: makeQuote(quotes),
-  backgroundColor: setBackground(colors)
+  quote: { quote: '', speaker: '' },
+  backgroundColor: 'white'
 };
 
 export const quotesReducer = (state = defaultState, action) => {

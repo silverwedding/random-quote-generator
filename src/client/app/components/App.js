@@ -1,8 +1,7 @@
 import React from 'react';
 
-const App = (props) => {
-  return (
-  <div style={{backgroundColor: props.backgroundColor}}>
+const App = ({ quote, backgroundColor, getNewQuote }) => (
+  <div style={{backgroundColor: backgroundColor}}>
     <div className="container">
       <div className="row">
         <div className="col-xs-12">
@@ -18,29 +17,29 @@ const App = (props) => {
               <h3 className="text-left">
                 <i className="fa fa-quote-left fa-2x"/>
               </h3>
-              <p>{props.quote.quote}</p>
+              <p className="quote-content">{quote.quote}</p>
               <h3 className="text-right">
                 <i className="fa fa-quote-right fa-2x"/>
               </h3>
             </div>
-            <p className="author">{props.quote.speaker}</p>
+            <p className="author">{quote.speaker}</p>
           </div>
           <hr />
-          <button id="getQuote" className="btn btn-default" onClick={props.submitNewQuote} >
+          <button id="getQuote" className="btn btn-default" onClick={getNewQuote} >
             Get Quote
           </button>
           <a
             className="btn btn-primary"
             id="twitter"
-            href={'https://twitter.com/intent/tweet?text=' + props.quote.quote}
+            href={'https://twitter.com/intent/tweet?text=' + quote.quote}
             target="_blank"
-            >
+          >
             <i className="fa fa-twitter"/> Tweet
-        </a>
+          </a>
         </div>
       </div>
     </div>
-  </div>);
-};
+  </div>
+);
 
 export default App;
